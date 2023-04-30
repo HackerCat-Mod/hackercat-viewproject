@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>View Project - HackerCat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <style>
+      body {
+        padding: 50px;
+        font-family: "Roboto", sans-serif;
+      }
+      h1, h2 {
+        font-weight: 255;
+      }
+      viewproject-right {
+        float: right;
+        width: 40%;
+      }
+    </style>
+    <!-- Add the theme's stylesheet -->
+    <link rel="stylesheet" href="//cdn.quilljs.com/1.3.6/quill.snow.css" />
+
+    <script src="//cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script>
+      var instructionseditor = new Quill("#instructions-edit", {
+        modules: {
+          toolbar: [["bold", "italic", "image", "link", "blockquote"]],
+        },
+        placeholder: "How does this project work? What keys are used?",
+        theme: "snow",
+      });
+      var noteseditor = new Quill("#notes-edit", {
+        modules: {
+          toolbar: [["bold", "italic", "link"]],
+        },
+        placeholder: "Credit any content you used here. It's mandatory if you used content from another HackerCat project without remixing it!",
+        theme: "snow",
+      });
+    </script>
+  </head>
+  <body>
+    <h1>View Project</h1><br><small>by <a href="//example.com">ExampleAccount</a></small>
+    
+    <div class="viewproject-right">
+      <b>Instructions</b><br /><div class="instructions-edit"></div><br />
+      <b>Notes and credits</b><br /><div class="notes-edit"></div>
+    </div>
+    
+    <p><i>HackerCat is still in development - the project screen will be added later</i></p>
+</html>
